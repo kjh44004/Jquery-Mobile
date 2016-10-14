@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Basic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css">
+    <style>
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <!-- 첫 번째 페이지 -->
+    <div data-role="page" id="first-page">
+        <div data-role="header" data-theme="b">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview"  data-inset="true">                
+                <li>
+                    <a href="#page28">
+                        <h3>30-28</h3>
+                        <p>select / slider / textarea</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page29">
+                        <h3>30-29</h3>
+                        <p>Input slider / Search Input</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page36">
+                        <h3>30-36</h3>
+                        <p>Panel</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page45">
+                        <h3>30-45</h3>
+                        <p>External Link / Local Link</p>
+                    </a>
+                </li>                           
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="page45">
+        <div data-role="header">
+            <h1>Moblie</h1>
+        </div>
+        <div data-role="content">
+            <a href="http://hanb.co.kr" data-role="button">External Link</a>
+            <a href="OtherPage.html" data-role="button">Local Link</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="page36">
+        <div data-role="panel" id="panel">
+            <h1>Panel</h1>
+            <a href="#panel" data-rel="close">Close panel</a> <!-- 이건 먹통 -->
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <a href="#panel" class="btn">Open Panel</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="page29">
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="slider">Input slider</label>
+                <input type="range" name="sldier" id="slider" value="0" min="0" max="100">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="search">Search Input</label>
+                <input type="search" name="search" id="search"/>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="page28">
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="select">Select Input</label>
+                <select id="select">
+                    <option>서울</option>
+                    <option>부산</option>
+                    <option>대구</option>
+                    <option>대전</option>                    
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="slider">Select slider</label>
+                <select name="slider" id="slider" data-role="slider">
+                    <option value="off">off</option>
+                    <option value="on">on</option>
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="textarea">Textarea Input</label>
+                <textarea id="textarea"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="radio/check-page">
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <div data-role="controlgroup">
+                    <fieldset data-role="controlgroup">
+                        <legend>Check</legend>
+                        <label for="radio-input-1">남</label>
+                        <input type="radio" name="radio-input" id="radio-input-1"/>
+                        <label for="radio-input-2">여</label>
+                        <input type="radio" name="radio-input" id="radio-input-2"/>
+                    </fieldset>
+                </div>
+                <div data-role="controlgroup">
+                    <fieldset data-role="controlgroup">
+                        <legend>Check</legend>
+                        <label for="checkbox-input-1">남</label>
+                        <input type="checkbox" name="checkbox-input-1" id="checkbox-input-1"/>
+                        <label for="checkbox-input-2">여</label>
+                        <input type="checkbox" name="checkbox-input-2" id="checkbox-input-2"/>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="login-page">
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="text-input">Text Input</label>
+                <input type="text" name="text-input" id="text-input"/>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="pwd-input">Text Input</label>
+                <input type="password" name="pwd-input" id="pwd-input"/>
+            </div>            
+        </div>
+    </div>
+
+    <div data-role="page" id="filter-page">
+        <div data-role="header" data-theme="b" data-add-back-btn="true">
+            <h1>Mobile</h1>
+        </div>
+        <div data-role="content">
+            <ui data-role="listview" data-inset="true" data-filter="true"> 
+
+            <!-- data-filter="true" : 유사 검색기능 단, 화면에 보이는 페이지에서만 검색 가능 --> 
+                <li data-role="list-divider">Dvider</li>
+                <!-- data-role="list-divider" : 리스트를 나눠주는 막대 생성 -->
+                <li><a href="#">블랙 매지션덱</a></li>
+                <li><a href="#">10렙 열차덱</a></li>
+                <li><a href="#">네크로즈</a></li>
+                <li><a href="#">ABC</a></li>
+                <li><a href="#">메탈포제 인잭터</a></li>                
+            </ui>
+        </div>
+    </div>
+</body>
+</html>
